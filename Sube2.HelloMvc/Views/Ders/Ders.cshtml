@@ -1,0 +1,30 @@
+﻿
+@model ﻿IEnumerable<Ders>
+
+@{
+    ViewData["Title"] = "Ders";
+}
+
+<h1>Dersler</h1>
+<h1>Ders Listesi</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Ders Adı</td>
+            <td>Kredi</td>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Dersad</td>
+                <td>@item.Kredi</td>
+                <td><a class="btn btn-sm btn-success" href="/Ders/DersGuncelle/@item.Dersid">Güncelle</a> <a class="btn btn-sm btn-danger" href="/Ders/DersSil/@item.Dersid" onclick="return confirm('Emin misiniz?')">Sil </a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

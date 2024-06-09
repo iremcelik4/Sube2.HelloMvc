@@ -1,0 +1,17 @@
+﻿@model Ders
+@{
+    ViewData["Title"] = "DersEkle";
+}
+
+<h1>DersEkle</h1>
+
+<form asp-action="DersEkle" asp-controller="Ders" method="post">
+   
+    <label>Ders Adı</label>
+    <input type="text" asp-for="Dersad" />
+    <label>Ders Kredisi</label>
+    <input type="text" asp-for="Kredi" />
+    <input type="submit" value="Kaydet" class="btn btn-sm btn-success" />
+
+
+</form>
